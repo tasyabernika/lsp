@@ -9,6 +9,15 @@
                 </div>
             @endforeach
 
+            <div class="mb-10">
+                @foreach ($beritas as $berita)
+                    <div class="alert alert-primary alert-dismissible fade show">
+                        {{ $berita->isi }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endforeach
+              </div>
+
             <div class="row">
                 @foreach ($kategori as $k)
                     @if ($k->bukus->count() < 1)

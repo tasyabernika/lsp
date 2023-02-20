@@ -16,7 +16,7 @@ class AdministratorController extends Controller
         return view('admin.masterdata.administrator', compact('admin'));
     }
 
-    public function storeAdministrator(Request $request)
+    public function storeAdministrator( Request $request)
     {
         $admin = User::create([
             'kode' => '',

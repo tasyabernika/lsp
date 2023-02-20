@@ -33,7 +33,7 @@
                 <a href="{{ route('user.form_pengembalian') }}">Formulir Pengembalian Buku</a>
             </li>
             <li class="submenu-item ">
-                <a href="{{ route('user.submit_pengembalian') }}">Riwayat Pengembalian Buku</a>
+                <a href="{{ route('user.riwayat_pengembalian') }}">Riwayat Pengembalian Buku</a>
             </li>
         </ul>
     </li>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AdministratorController;
 use App\Http\Controllers\Admin\AnggotaController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Admin\BeritaController;
 use App\Http\Controllers\Admin\DatabukuController;
 use App\Http\Controllers\Admin\IdentitasController;
 use App\Http\Controllers\Admin\KategoriController;
@@ -59,8 +60,8 @@ Route::put('/update/status/{id}', [AnggotaController::class, 'update_status'])->
 Route::get('/penerbit', [PenerbitController::class, 'indexPenerbit'])->name('admin.penerbit');;
 Route::post('/tambah-penerbit', [PenerbitController::class, 'storePenerbit'])->name('admin.tambah_penerbit');
 Route::put('/edit/penerbit/{id}', [PenerbitController::class, 'updatePenerbit'])->name('admin.update_penerbit');
-Route::post('/hapus/anggota/{id}', [PenerbitController::class, 'updateStatus'])->name('admin.update_status_penerbit');
-Route::delete('/update_status/{id}', [PenerbitController::class, 'deletePenerbit']);
+Route::post('/update_status/{id}', [PenerbitController::class, 'updateStatus'])->name('admin.update_status_penerbit');
+Route::delete('/hapus/anggota/{id}', [PenerbitController::class, 'deletePenerbit']);
 
 //administrator
 Route::get('/administrator', [AdministratorController::class, 'indexAdministrator'])->name('admin.administrator');
@@ -108,8 +109,8 @@ Route::get('/data-peminjaman', [AdminPeminjamanController::class, 'indexPeminjam
     Route::get('/berita', [BeritaController::class, 'indexBerita'])->name('admin.berita');;
     Route::post('/tambah-berita', [BeritaController::class, 'storeBerita'])->name('admin.tambah_berita');
     Route::put('/edit/berita/{id}', [BeritaController::class, 'updateBerita'])->name('admin.update_berita');
-    Route::post('/hapus/berita/{id}', [BeritaController::class, 'updateBerita'])->name('admin.update_status_berita');
-    Route::delete('/update_status/{id}', [BeritaController::class, 'deleteBerita']);
+    Route::post('/update-status-berita/{id}', [BeritaController::class, 'updateBerita'])->name('admin.update_status_berita');
+    Route::delete('/hapus/berita/{id}', [BeritaController::class, 'deleteBerita']);
 });
 
                                 // USER //

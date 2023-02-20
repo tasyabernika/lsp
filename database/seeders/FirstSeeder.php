@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Kategori;
+use App\Models\Berita;
 use App\Models\Penerbit;
 use App\Models\Buku;
 use App\Models\Identitas;
@@ -32,11 +33,11 @@ class FirstSeeder extends Seeder
             'password'    => Hash::make("password"),
             'kelas'    => 'XII-RPL',
             'alamat' => 'JL. Tanah Merdeka',
-            'verif'    => '',
+            // 'verif'    => '',
             'role' => 'admin',
             'join_date'    => '2023-01-06',
             'terakhir_login' => '2023-01-06',
-            'foto' => '',
+            // 'foto' => '',
         ]);
 
         User::Create([
@@ -51,7 +52,7 @@ class FirstSeeder extends Seeder
             'role' => 'user',
             'join_date'    => '2023-01-06',
             // 'terakhir_login' => '',
-            'foto' => '',
+            // 'foto' => '',
         ]);
 
         User::Create([
@@ -66,7 +67,7 @@ class FirstSeeder extends Seeder
             'role' => 'user',
             'join_date'    => '2023-01-06',
             // 'terakhir_login' => '',
-            'foto' => '',
+            // 'foto' => '',
         ]);
 
         User::Create([
@@ -126,10 +127,10 @@ class FirstSeeder extends Seeder
             'penerbit_id' => '1',
             'pengarang' => 'Johannes',
             'tahun_terbit' => '2017',
-            'isbn' => '',
+            // 'isbn' => '',
             'j_buku_baik' => '12',
             'j_buku_rusak' => '4',
-            'foto' => '',
+            // 'foto' => '',
         ]);
 
         Buku::create([
@@ -138,10 +139,10 @@ class FirstSeeder extends Seeder
             'penerbit_id' => '1',
             'pengarang' => 'Nur ali',
             'tahun_terbit' => '2017',
-            'isbn' => '',
+            // 'isbn' => '',
             'j_buku_baik' => '12',
             'j_buku_rusak' => '4',
-            'foto' => '',
+            // 'foto' => '',
         ]);
 
         Buku::create([
@@ -150,10 +151,10 @@ class FirstSeeder extends Seeder
             'penerbit_id' => '2',
             'pengarang' => 'Robert',
             'tahun_terbit' => '2018',
-            'isbn' => '',
+            // 'isbn' => '',
             'j_buku_baik' => '12',
             'j_buku_rusak' => '6',
-            'foto' => '',
+            // 'foto' => '',
         ]);
 
         Buku::create([
@@ -162,10 +163,10 @@ class FirstSeeder extends Seeder
             'penerbit_id' => '3',
             'pengarang' => 'Zidni',
             'tahun_terbit' => '2019',
-            'isbn' => '',
+            // 'isbn' => '',
             'j_buku_baik' => '12',
             'j_buku_rusak' => '2',
-            'foto' => '',
+            // 'foto' => '',
         ]);
 
         //PEMINJAMAN
@@ -262,6 +263,11 @@ class FirstSeeder extends Seeder
             'email_app'    => 'smkn10jakarta@gmail.com',
             'nomor_hp'    => '82918298493d',
             'foto' => '',
+        ]);
+
+        Berita::create([
+            'isi' => 'KEMBALIKAN SEMUA BUKU!!',
+            'status' => 'aktif',
         ]);
     }
 }
