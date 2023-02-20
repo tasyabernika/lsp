@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use App\Models\Buku;
 use App\Models\Kategori;
+use App\Models\Berita;
 use App\Models\Pemberitahuan;
 use Illuminate\Http\Request;
 
@@ -14,6 +15,7 @@ class DashboardController extends Controller
         $kategori = Kategori::get();
         $pemberitahuans = Pemberitahuan::where('status', 'aktif')->get();
         $bukus = Buku::all();
-        return view('user.dashboard', compact("pemberitahuans", "bukus", "kategori"));
+        $beritas = Berita::all();
+        return view('user.dashboard', compact("pemberitahuans", "bukus", "kategori", "beritas"));
     }
 }

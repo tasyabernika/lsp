@@ -3,20 +3,19 @@
 @section('content')
     <div class="row">
         <div class="col">
-            @foreach ($pemberitahuans as $pemberitahuan)
+            {{-- @foreach ($pemberitahuans as $pemberitahuan)
                 <div class="alert alert-primary" role="alert">
                     {{ $pemberitahuan->isi }}
                 </div>
-            @endforeach
-
-            <div class="mb-10">
+            @endforeach --}}
+            <div class="">
                 @foreach ($beritas as $berita)
                     <div class="alert alert-primary alert-dismissible fade show">
                         {{ $berita->isi }}
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 @endforeach
-              </div>
+            </div>
 
             <div class="row">
                 @foreach ($kategori as $k)
