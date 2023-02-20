@@ -18,6 +18,7 @@ use App\Http\Controllers\User\PengembalianController;
 use App\Http\Controllers\User\PesanController;
 use App\Http\Controllers\User\ProfileController;
 use App\Http\Controllers\UserRegister;
+use App\Http\Controllers\RegisterController;
 use App\Http\Middleware\Role;
 use App\Models\Kategori;
 use Illuminate\Support\Facades\Auth;
@@ -51,10 +52,10 @@ Route::middleware(['auth','role:admin'])->prefix('/admin')->group(function(){
 //[master data]
 //anggota
 Route::get('/anggota', [AnggotaController::class, 'indexAnggota'])->name('admin.anggota');
-Route::post('/tambah-anggota', [AnggotaController::class, 'storeAnggota'])->name('admin.tambah_anggota');
-Route::put('/edit/angggota/{id}', [AnggotaController::class, 'updateAnggota'])->name('admin.update.anggota');
-Route::delete('/hapus/anggota/{id}', [AnggotaController::class, 'deleteAnggota']);
-Route::put('/update/status/{id}', [AnggotaController::class, 'update_status'])->name('admin.update_status');
+    Route::post('/tambah-anggota', [AnggotaController::class, 'storeAnggota'])->name('admin.tambah_anggota');
+    Route::put('/edit/anggota/{id}', [AnggotaController::class, 'updateAnggota'])->name('admin.update.anggota');
+    Route::delete('/hapus/anggota/{id}', [AnggotaController::class, 'deleteAnggota']);
+    Route::put('/update_status/{id}', [AnggotaController::class, 'update_status'])->name('admin.update_status');
 
 //penerbit
 Route::get('/penerbit', [PenerbitController::class, 'indexPenerbit'])->name('admin.penerbit');;
