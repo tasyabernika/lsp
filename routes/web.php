@@ -54,7 +54,7 @@ Route::middleware(['auth','role:admin'])->prefix('/admin')->group(function(){
 Route::get('/anggota', [AnggotaController::class, 'indexAnggota'])->name('admin.anggota');
     Route::post('/tambah-anggota', [AnggotaController::class, 'storeAnggota'])->name('admin.tambah_anggota');
     Route::put('/edit/anggota/{id}', [AnggotaController::class, 'updateAnggota'])->name('admin.update.anggota');
-    Route::delete('/hapus/anggota/{id}', [AnggotaController::class, 'deleteAnggota'])->name('admin.delete.anggota');
+    Route::delete('/hapus/anggota/{id}', [AnggotaController::class, 'deleteAnggota']);
     Route::put('/update_status/{id}', [AnggotaController::class, 'update_status'])->name('admin.update_status');
 
     //penerbit
@@ -107,11 +107,11 @@ Route::get('/data-peminjaman', [AdminPeminjamanController::class, 'indexPeminjam
     Route::put('/edit/identitas', [IdentitasController::class, 'updateIdentitas'])->name('admin.update_identitas');
 
     //berita
-    Route::get('/berita', [BeritaController::class, 'indexBerita'])->name('admin.berita');;
-    Route::post('/tambah-berita', [BeritaController::class, 'storeBerita'])->name('admin.tambah_berita');
-    Route::put('/edit/berita/{id}', [BeritaController::class, 'updateBerita'])->name('admin.update_berita');
-    Route::post('/update-status-berita/{id}', [BeritaController::class, 'updateBerita'])->name('admin.update_status_berita');
-    Route::delete('/hapus/berita/{id}', [BeritaController::class, 'deleteBerita']);
+    Route::get('/berita', [BeritaController::class, 'indexBerita'])->name('admin.berita');
+     Route::post('/tambah-berita', [BeritaController::class, 'storeBerita'])->name('admin.tambah_berita');
+     Route::put('/edit/berita/{id}', [BeritaController::class, 'updateBerita'])->name('admin.update_berita');
+     Route::post('/update-status-berita/{id}', [BeritaController::class, 'updateStatusBerita'])->name('admin.update_status_berita');
+     Route::delete('/hapus/berita/{id}', [BeritaController::class, 'deleteBerita']);
 });
 
                                 // USER //

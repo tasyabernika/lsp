@@ -15,7 +15,7 @@ class DashboardController extends Controller
         $kategori = Kategori::get();
         $pemberitahuans = Pemberitahuan::where('status', 'aktif')->get();
         $bukus = Buku::all();
-        $beritas = Berita::all();
+        $beritas = Berita::where('status', 'aktif')->get();
         return view('user.dashboard', compact("pemberitahuans", "bukus", "kategori", "beritas"));
     }
 }

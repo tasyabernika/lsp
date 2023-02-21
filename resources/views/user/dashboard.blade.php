@@ -24,7 +24,7 @@
                     @else
                         <div class="col-12">
                             <h4>
-                                <span class="badge bg-light-danger">{{ $k->nama }}</span>
+                                <span class="badge bg-light-primary">{{ $k->nama }}</span>
                             </h4>
                             <div class="row">
                                 @foreach ($k->bukus as $buku)
@@ -36,14 +36,14 @@
                                                     alt="....">
                                             </div>
                                             <div class="card-body">
-                                                <h4 style="font-size: 20px; font-weight: bold">
+                                                <h4 style="font-size: 15px; font-weight: bold">
                                                     {{ $buku->judul }}
                                                 </h4>
                                                 {{-- <span class="badge bg-secondary">{{ $buku->kategori->nama }} --}}
                                                 </span>
 
                                                 <div class="row">
-                                                    <div class="col-6">
+                                                    <div class="col-5">
                                                         <p class="text-start">
                                                             {{ $buku->pengarang }}
                                                         </p>
