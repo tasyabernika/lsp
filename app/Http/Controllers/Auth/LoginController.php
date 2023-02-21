@@ -10,7 +10,6 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-
 class LoginController extends Controller
 {
     /*
@@ -65,9 +64,14 @@ class LoginController extends Controller
         }
 
         // dd($user->verif);
+
+
         if ($user->verif == 'unverified') {
+
             Session::flush();
+
             Auth::logout();
+
             return redirect()->back()->with('status', 'danger')->with('message', 'Gagal Login Unverified User');
         }
 
@@ -75,5 +79,4 @@ class LoginController extends Controller
             'user.dashboard'
         );
     }   
-
 }

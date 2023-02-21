@@ -15,7 +15,7 @@ class CreatePeminjamenTable extends Migration
     {
         Schema::create('peminjamen', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->foreignId('buku_id')->constrained();
             $table->date('tgl_peminjaman');
             $table->date('tgl_pengembalian')->nullable();

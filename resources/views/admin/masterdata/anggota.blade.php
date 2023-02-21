@@ -9,9 +9,9 @@
         <div class="col-9">
             <h4>Data Anggota E - Perpus</h4>
         </div>
-        {{-- <div class="col-3">
+        <div class="col-3">
             <a href="{{ Route('user.form_peminjaman') }}" class="btn btn-primary float">Pinjam</a>
-        </div> --}}
+        </div>
     </div>
     <section class="section">
         <div class="card">
@@ -172,12 +172,11 @@
                         aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
-                                <form action={{ url('/admin/hapus/anggota/' . $a->id) }} method="POST"
-                                    enctype="multipart/form-data">
+                                <form action="{{ url('admin/hapus/anggota/' .  $a->id ) }}" method="POST" >
                                     @csrf
-                                    @method('DELETE')
+                                    @method('DELETE')>
                                     <div class="modal-body">
-                                        <center class="mt-3">
+                                        <center class="mt-3"
                                             <p>
                                                 apakah anda yakin ingin menghapus data ini?
                                             </p>
